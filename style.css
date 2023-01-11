@@ -1,10 +1,13 @@
 body{
 	background: #fff;
 }
+.title{
+	margin-top: 60px;
+}
 .cart{
-	margin: 100px 0;
-	background-color: #F6F5FA;;
-	padding: 60px 0;
+	margin: 60px 0;
+    background-color: #F6F5FA;
+    padding: 60px 0;
 }
 .total-price{
 	padding-bottom: 15px;
