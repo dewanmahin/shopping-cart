@@ -1,29 +1,29 @@
-function updateCaseNumber(isIncrease){
-    const caseNumberField = document.getElementById('case-number');
-    const caseNumberString = caseNumberField.value;
-    let previousCaseNumber = parseInt(caseNumberString);
-    let newCaseNumber;
+function updateCaseQuantity(isIncrease){
+    const caseQuantityField = document.getElementById('case-number');
+    const caseQuantityString = caseQuantityField.value;
+    let previousCaseQuantity = parseInt(caseQuantityString);
+    let newCaseQuantity;
     if(isIncrease == true){
-        newCaseNumber = ++previousCaseNumber;
+        newCaseQuantity = ++previousCaseQuantity;
     }else{
-        newCaseNumber = --previousCaseNumber;
+        newCaseQuantity = --previousCaseQuantity;
     }
-    caseNumberField.value = newCaseNumber;
-    return newCaseNumber;
+    caseQuantityField.value = newCaseQuantity;
+    return newCaseQuantity;
 }
 
-function updateCasePrice(newCaseNumber){
-    const caseTotalPrice = newCaseNumber * 59;
+function updateCasePrice(newCaseQuantity){
+    const caseTotalPrice = newCaseQuantity * 59;
     const caseTotalElement = document.getElementById('case-total');
     caseTotalElement.innerText = caseTotalPrice;
 }
 
 document.getElementById('case-plus').addEventListener('click', function(){
-    const newCaseNumber = updateCaseNumber(true);
-    updateCasePrice(newCaseNumber);
+    const newCaseQuantity = updateCaseQuantity(true);
+    updateCasePrice(newCaseQuantity);
 })
 
 document.getElementById('case-minus').addEventListener('click', function(){
-    const newCaseNumber = updateCaseNumber(false);
-    updateCasePrice(newCaseNumber);
+    const newCaseQuantity = updateCaseQuantity(false);
+    updateCasePrice(newCaseQuantity);
 })
