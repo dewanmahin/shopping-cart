@@ -21,9 +21,11 @@ function updatePhonePrice(newPhoneQuantity){
 document.getElementById('phone-plus').addEventListener('click', function(){
     const newPhoneQuantity = updatePhoneQuantity(true);
     updatePhonePrice(newPhoneQuantity)
+    calculateTotal()
 })
 
 document.getElementById('phone-minus').addEventListener('click', function(){
     const newPhoneQuantity = updatePhoneQuantity(false);
     updatePhonePrice(newPhoneQuantity)
+    calculateTotal()
 })
